@@ -28,3 +28,7 @@ Route::prefix('admin')->group(function () {
     })->name('admin.tables');
 });
 
+Route::fallback(function () {
+    return view('lib.NotFound');
+});
+
