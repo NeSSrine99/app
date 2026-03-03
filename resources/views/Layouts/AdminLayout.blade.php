@@ -15,9 +15,9 @@
 
 <body class="text-blueGray-700 antialiased">
 
-    @include('Admin.Dashboard.components.Sidebar')
+    @include('Admin.components.Sidebar')
     @yield('content')
-    @include('Admin.Dashboard.components.Footer')
+    @include('Admin.components.Footer')
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" charset="utf-8"></script>
