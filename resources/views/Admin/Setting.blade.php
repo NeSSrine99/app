@@ -1,7 +1,5 @@
 @extends('Layouts.AdminLayout')
 
-
-
 @section('content')
     <div class="relative md:ml-64 bg-blueGray-50">
         <nav
