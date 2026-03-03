@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../../assets/img/apple-icon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="../../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/styles/tailwind.css" />
+    <title>Maps | Notus Tailwind JS by Creative Tim</title>
+  </head>
+  <body class="text-blueGray-700 antialiased">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script type="text/javascript">
+      /* Make dynamic date appear */
+      (function () {
+        if (document.getElementById("get-current-year")) {
+          document.getElementById("get-current-year").innerHTML =
+            new Date().getFullYear();
+        }
+      })();
+      /* Sidebar - Side navigation menu on mobile/responsive mode */
+      function toggleNavbar(collapseID) {
+        document.getElementById(collapseID).classList.toggle("hidden");
+        document.getElementById(collapseID).classList.toggle("bg-white");
+        document.getElementById(collapseID).classList.toggle("m-2");
+        document.getElementById(collapseID).classList.toggle("py-3");
+        document.getElementById(collapseID).classList.toggle("px-6");
+      }
+      /* Function for dropdowns */
+      function openDropdown(event, dropdownID) {
+        let element = event.target;
+        while (element.nodeName !== "A") {
+          element = element.parentNode;
+        }
+        Popper.createPopper(element, document.getElementById(dropdownID), {
+          placement: "bottom-start"
+        });
+        document.getElementById(dropdownID).classList.toggle("hidden");
+        document.getElementById(dropdownID).classList.toggle("block");
+      }
+
+      (function () {
+        /* Map initialisation */
+        let google = window.google;
+        let map = document.getElementById("map-canvas");
+        let lat = map.getAttribute("data-lat");
+        let lng = map.getAttribute("data-lng");
+
+        const myLatlng = new google.maps.LatLng(lat, lng);
+        const mapOptions = {
+          zoom: 12,
+          scrollwheel: false,
+          center: myLatlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          styles: [
+            {
+              featureType: "administrative",
+              elementType: "labels.text.fill",
+              stylers: [{ color: "#444444" }]
+            },
+            {
+              featureType: "landscape",
+              elementType: "all",
+              stylers: [{ color: "#f2f2f2" }]
+            },
+            {
+              featureType: "poi",
+              elementType: "all",
+              stylers: [{ visibility: "off" }]
+            },
+            {
+              featureType: "road",
+              elementType: "all",
+              stylers: [{ saturation: -100 }, { lightness: 45 }]
+            },
+            {
+              featureType: "road.highway",
+              elementType: "all",
+              stylers: [{ visibility: "simplified" }]
+            },
+            {
+              featureType: "road.arterial",
+              elementType: "labels.icon",
+              stylers: [{ visibility: "off" }]
+            },
+            {
+              featureType: "transit",
+              elementType: "all",
+              stylers: [{ visibility: "off" }]
+            },
+            {
+              featureType: "water",
+              elementType: "all",
+              stylers: [{ color: "#fbb6ce" }, { visibility: "on" }]
+            }
+          ]
+        };
+
+        map = new google.maps.Map(map, mapOptions);
+
+        const marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          animation: google.maps.Animation.DROP,
+          title: "Hello World!"
+        });
+
+        const contentString =
+          '<div class="info-window-content"><h2>Notus Tailwind JS</h2>' +
+          "<p>A beautiful UI Kit and Admin for Tailwind CSS. It is Free and Open Source.</p></div>";
+
+        const infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        google.maps.event.addListener(marker, "click", function () {
+          infowindow.open(map, marker);
+        });
+      })();
+    </script>
+  </body>
+</html>
