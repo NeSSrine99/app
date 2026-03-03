@@ -1,6 +1,6 @@
 @extends('Layouts.AdminLayout')
 
-@section('title', 'Dashboard')
+
 
 @section('content')
     <noscript>You need to enable JavaScript to run this app.</noscript>

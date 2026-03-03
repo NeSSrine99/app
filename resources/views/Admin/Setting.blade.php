@@ -1,10 +1,8 @@
 @extends('Layouts.AdminLayout')
 
-@section('title', 'Settings')
+
 
 @section('content')
-
-
     <div class="relative md:ml-64 bg-blueGray-50">
         <nav
             class="absolute top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-4">
@@ -437,6 +435,4 @@
             </footer>
         </div>
     </div>
-
-
 @endsection
