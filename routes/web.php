@@ -8,6 +8,7 @@ Route::get('/', function () {
 
 Route::view('/login', 'Auth.Login')->name('login');
 Route::view('/register', 'Auth.Register')->name('register');
+Route::post('/register', [\App\Http\Controllers\AuthController::class, 'register'])->name('register.post');
 
 // Admin Routes
 Route::prefix('admin')->group(function () {
