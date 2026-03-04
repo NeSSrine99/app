@@ -10,10 +10,10 @@
                 <form class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3">
                     <div class="relative flex w-full flex-wrap items-stretch">
                         <span
-                            class="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3"><i
+                            class="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300  bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3"><i
                                 class="fas fa-search"></i></span>
                         <input type="text" placeholder="Search here..."
-                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10" />
+                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative  bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10" />
                     </div>
                 </form>
                 <ul class="flex-col md:flex-row list-none items-center hidden md:flex">
@@ -49,10 +49,10 @@
                     <!-- Card stats -->
                     <div class="flex flex-wrap">
                         <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
-                            <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
+                            <div class="relative flex flex-col min-w-0 wrap-break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
                                 <div class="flex-auto p-4">
                                     <div class="flex flex-wrap">
-                                        <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
+                                        <div class="relative w-full pr-4 max-w-full grow flex-1">
                                             <h5 class="text-blueGray-400 uppercase font-bold text-xs">
                                                 Traffic
                                             </h5>
@@ -79,10 +79,10 @@
                             </div>
                         </div>
                         <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
-                            <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
+                            <div class="relative flex flex-col min-w-0 wrap-break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
                                 <div class="flex-auto p-4">
                                     <div class="flex flex-wrap">
-                                        <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
+                                        <div class="relative w-full pr-4 max-w-full grow flex-1">
                                             <h5 class="text-blueGray-400 uppercase font-bold text-xs">
                                                 New users
                                             </h5>
@@ -107,10 +107,10 @@
                             </div>
                         </div>
                         <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
-                            <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
+                            <div class="relative flex flex-col min-w-0 wrap-break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
                                 <div class="flex-auto p-4">
                                     <div class="flex flex-wrap">
-                                        <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
+                                        <div class="relative w-full pr-4 max-w-full grow flex-1">
                                             <h5 class="text-blueGray-400 uppercase font-bold text-xs">
                                                 Sales
                                             </h5>
@@ -135,10 +135,10 @@
                             </div>
                         </div>
                         <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
-                            <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
+                            <div class="relative flex flex-col min-w-0 wrap-break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
                                 <div class="flex-auto p-4">
                                     <div class="flex flex-wrap">
-                                        <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
+                                        <div class="relative w-full pr-4 max-w-full grow flex-1">
                                             <h5 class="text-blueGray-400 uppercase font-bold text-xs">
                                                 Performance
                                             </h5>
@@ -171,7 +171,7 @@
         <div class="px-4 md:px-10 mx-auto w-full -m-24">
             <div class="flex flex-wrap">
                 <div class="w-full px-4">
-                    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+                    <div class="relative flex flex-col min-w-0 wrap-break-words bg-white w-full mb-6 shadow-lg rounded">
                         <div id="map-canvas" class="relative w-full rounded h-600-px" data-lat="40.748817"
                             data-lng="-73.985428"></div>
                     </div>
@@ -179,7 +179,7 @@
             </div>
             <footer class="block py-4">
                 <div class="container mx-auto px-4">
-                    <hr class="mb-4 border-b-1 border-blueGray-200" />
+                    <hr class="mb-4 border-b border-blueGray-200" />
                     <div class="flex flex-wrap items-center md:justify-between justify-center">
                         <div class="w-full md:w-4/12 px-4">
                             <div class="text-sm text-blueGray-500 font-semibold py-1 text-center md:text-left">

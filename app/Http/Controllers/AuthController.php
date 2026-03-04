@@ -34,7 +34,7 @@ class AuthController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function register(Request $request)
+    public function register(Request $request)                                              
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
@@ -50,6 +50,6 @@ class AuthController extends Controller
 
         auth()->login($user);
 
-        return redirect('/')->with('success', 'Account created.');
+        return redirect()->route('admin.dashboard')->with('success', 'Account created.');
     }
 }
